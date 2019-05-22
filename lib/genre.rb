@@ -20,7 +20,6 @@
 #     end
 #   end
 # end
-
 class Genre
   attr_accessor :name
 
@@ -29,12 +28,13 @@ class Genre
     @songs = []
   end
 
-  def songs
-    @songs << self
-  end
-
   def add_song(song)
     @songs << song
+    song.genre = self
+  end
+
+  def songs
+    @songs
   end
 
   def artists
