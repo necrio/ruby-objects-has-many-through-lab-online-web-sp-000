@@ -1,24 +1,47 @@
-class Genre
-  attr_accessor :name, :songs
+# class Genre
+#   attr_accessor :name, :songs
+# 
+# 
+# 
+#   def initialize(name)
+#     @name = name
+#     @songs = []
+#   end
+# 
+#   def songs
+#     @songs
+#   end
+# 
+#   def add_song(song)
+#     @songs << song
+#   end
+# 
+#   def artists
+#     @songs.collect do |song|
+#       song.artist
+#     end
+#   end
+# end
 
-
-
-  def initialize(name)
-    @name = name
-    @songs = []
-  end
-
-  def songs
-    @songs
-  end
-
-  def add_song(song)
-    @songs << song
-  end
-
-  def artists
-    @songs.collect do |song|
-      song.artist
-    end
-  end
+class Genre 
+	attr_accessor :name, :songs
+	
+	def initialize(name)
+		@name = name
+		@songs = []
+	end
+	
+	def songs
+		@songs
+	end
+	
+	def add_song(song)
+		@songs << song
+	end
+	
+	def artists #collect all the artists of a genre
+		@songs.collect do |song|
+			song.artist
+		end
+	end
 end
