@@ -1,5 +1,5 @@
 class Genre
-  attr_accessor :name
+  attr_accessor :name, :songs
 
 
 
@@ -9,7 +9,7 @@ class Genre
   end
 
   def songs
-    @songs = self
+    @songs
   end
 
   def add_song(song)
