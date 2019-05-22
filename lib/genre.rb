@@ -9,7 +9,7 @@ class Genre
   end
 
   def songs
-    @songs
+    @songs.include
   end
 
   def add_song(song)
