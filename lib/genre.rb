@@ -1,25 +1,3 @@
-# class Genre
-#   attr_accessor :name
-#
-#   def initialize(name)
-#     @name = name
-#     @songs = []
-#   end
-#
-#   def songs
-#     @songs
-#   end
-#
-#   def add_song(song)
-#     @songs << song
-#   end
-#
-#   def artists
-#     @songs.collect do |song|
-#       song.artist
-#     end
-#   end
-# end
 class Genre
   attr_accessor :name
 
@@ -28,13 +6,12 @@ class Genre
     @songs = []
   end
 
-  def add_song(song)
-    @songs << song
-    song.genre = self
-  end
-
   def songs
     @songs
+  end
+
+  def add_song(song)
+    @songs << song
   end
 
   def artists
@@ -43,3 +20,26 @@ class Genre
     end
   end
 end
+# class Genre
+#   attr_accessor :name
+# 
+#   def initialize(name)
+#     @name = name
+#     @songs = []
+#   end
+# 
+#   def add_song(song)
+#     @songs << song
+#     song.genre = self
+#   end
+# 
+#   def songs
+#     @songs
+#   end
+# 
+#   def artists
+#     @songs.collect do |song|
+#       song.artist
+#     end
+#   end
+# end
